@@ -1,5 +1,5 @@
 $bgColor: #eee;
-$headerColor: #ed225d;
+$headerColor: #E91E63;
 $footerColor: #37474F;
 $white: #fff;
 
@@ -19,6 +19,12 @@ header {
 	h1 {
 		margin: 10px 0;
 		font-weight: 100;
+	}
+
+	.breadcrumb {
+		background: #333;
+		padding: 8px 20px;
+		color: $white;
 	}
 }
 
