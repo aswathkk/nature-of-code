@@ -13,9 +13,18 @@ const config = {
 			test: /\.js$/,
 			exclude: /node_modules/,
 			use: 'babel-loader'
+		}, {
+			test: /\.scss$/,
+			use: [{
+				loader: 'style-loader'
+			}, {
+				loader: 'css-loader'
+			}, {
+				loader: 'sass-loader'
+			}]
 		}]
 	},
-	plugins: [new HtmlWebpackPlugin()],
+	plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		port: 9000,
