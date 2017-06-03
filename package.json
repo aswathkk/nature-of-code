@@ -1,0 +1,25 @@
+{
+  "name": "nature-of-code",
+  "version": "1.0.0",
+  "description": "Nature of Code samples",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d --watch --config ./webpack.dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aswathkk/nature-of-code"
+  },
+  "author": "Aswath K",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "p5": "^0.5.11"
+  }
+}
