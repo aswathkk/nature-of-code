@@ -10,3 +10,10 @@ yarn
 yarn run dev
 
 ```
+
+## Build for production
+```sh
+# production ready code will be inside 'dist' folder
+yarn run prod
+
+```
