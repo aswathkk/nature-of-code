@@ -1,12 +1,14 @@
-import randomWalkTowardsMouse from './topics/introduction/random-walk-towards-mouse-pointer.js';
-
 const chapters = [
 	{
 		name: 'Introduction',
 		samples: [{
 			name: 'Random Walk Towards Mouse Pointer',
 			slug: 'random-walk-towards-mouse-pointer',
-			demo: randomWalkTowardsMouse
+			demo: require('./topics/introduction/random-walk-towards-mouse-pointer.js')
+		},{
+			name: 'Uniform distribution / Gaussian distribution / Perlin noise',
+			slug: 'uniform-vs-normal-vs-perlin-noise',
+			demo: require('./topics/introduction/uniform-vs-normal-vs-perlin-noise.js')
 		}]
 	},
 

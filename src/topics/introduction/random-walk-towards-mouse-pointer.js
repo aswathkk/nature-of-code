@@ -1,4 +1,4 @@
-export default function randomWalkTowardsMouse(p) {
+module.exports = function (p) {
 	class Walk {
 		constructor(x, y) {
 			this.x = x;
