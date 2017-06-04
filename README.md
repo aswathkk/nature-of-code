@@ -1,19 +1,23 @@
-# Nature of Code Samples
-Samples created while going through [Nature of Code](http://natureofcode.com) by Daniel Shiffman.
+# Nature of Code Experiments
+My experiments while going through [Nature of Code](http://natureofcode.com) by Daniel Shiffman.
+https://aswathkk.github.io/nature-of-code/
+
+## Experiments
+- [Random walk towards mouse pointer](https://aswathkk.github.io/nature-of-code/#!/0/random-walk-towards-mouse-pointer)
 
 ## Setup
 ```sh
 # Install dependencies
-yarn
+npm install
 
 # Run development server
-yarn run dev
+npm run dev
 
 ```
 
 ## Build for production
 ```sh
 # production ready code will be inside 'dist' folder
-yarn run prod
+npm run prod
 
 ```

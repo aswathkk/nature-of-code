@@ -1,4 +1,4 @@
-import randomWalkTowardsMouse from './topics/introduction/1.js';
+import randomWalkTowardsMouse from './topics/introduction/random-walk-towards-mouse-pointer.js';
 
 const chapters = [
 	{

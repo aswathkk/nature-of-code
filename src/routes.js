@@ -8,14 +8,9 @@ const _disp = document.getElementById('disp');
 
 let canvas;
 
-function reset() {
-	if(typeof canvas !== 'undefined')
-		canvas.remove();
-	_chapter.innerHTML = '&nbsp';
-	_title.innerHTML = '';
-}
+// page.base('/nature-of-code');
 
-page('/', () => {
+page('/', (ctx) => {
 	reset();
 	let s = '<ol>';
 	chapters.forEach((c, i) => {
@@ -34,12 +29,32 @@ page('/', () => {
 
 page('/:chapter/:demo', ctx => {
 	_disp.innerHTML = '';
-	if(typeof canvas !== 'undefined')
+	if(canvas !== undefined)
 		canvas.remove();
-	let chapter = chapters[ctx.params.chapter].samples.filter( chap => chap.slug === ctx.params.demo );
-	_chapter.innerHTML = chapters[ctx.params.chapter].name;
-	_title.innerHTML = chapter[0].name;
-	canvas = new p5(chapter[0].demo, 'disp');
+
+	let chapter = chapters[ctx.params.chapter];
+	if(chapter.samples === undefined)
+		return page.redirect('/');
+
+	let experiment = chapter.samples.filter( chap => chap.slug === ctx.params.demo )[0];
+	if(experiment === undefined)
+		return page.redirect('/');
+
+	_chapter.innerHTML = chapter.name;
+	_title.innerHTML = experiment.name;
+
+	canvas = new p5(experiment.demo, 'disp');
 });
 
-page();
+page('*', (ctx) => {
+	page.redirect('/');
+})
+
+page({ hashbang: true });
+
+function reset() {
+	if(canvas !== undefined)
+		canvas.remove();
+	_chapter.innerHTML = '&nbsp';
+	_title.innerHTML = '';
+}
