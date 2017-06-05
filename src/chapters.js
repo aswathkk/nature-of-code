@@ -21,7 +21,12 @@ const chapters = [
 	},
 
 	{
-		name: 'Vectors'
+		name: 'Vectors',
+		samples: [{
+			name: 'Bouncing Ball',
+			slug: 'bouncing-ball',
+			demo: require('./topics/vectors/bouncing-ball.js')
+		}]
 	},
 
 	{
