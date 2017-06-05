@@ -13,6 +13,10 @@ const chapters = [
 			name: 'Random Walk using Perlin Noise',
 			slug: 'random-walk-perlin-noise',
 			demo: require('./topics/introduction/random-walk-perlin-noise.js')
+		},{
+			name: 'Generating cloud using Perlin Noise',
+			slug: 'clouds-using-perlin-noise',
+			demo: require('./topics/introduction/clouds-using-perlin-noise.js')
 		}]
 	},
 

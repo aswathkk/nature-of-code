@@ -5,6 +5,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Random walk towards mouse pointer](https://aswathkk.github.io/nature-of-code/#!/0/random-walk-towards-mouse-pointer)
 - [Uniform distribution / Gaussian distribution / Perlin noise](https://aswathkk.github.io/nature-of-code/#!/0/uniform-vs-normal-vs-perlin-noise)
 - [Random Walk using Perlin Noise](https://aswathkk.github.io/nature-of-code/#!/0/random-walk-perlin-noise)
+- [Generating cloud using Perlin Noise](https://aswathkk.github.io/nature-of-code/#!/0/clouds-using-perlin-noise)
 
 ## Setup
 ```sh
