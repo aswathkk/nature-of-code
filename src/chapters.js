@@ -26,6 +26,10 @@ const chapters = [
 			name: 'Bouncing Ball',
 			slug: 'bouncing-ball',
 			demo: require('./topics/vectors/bouncing-ball.js')
+		},{
+			name: 'Ball with random acceleration',
+			slug: 'ball-with-acceleration',
+			demo: require('./topics/vectors/ball-with-acceleration.js')
 		}]
 	},
 
