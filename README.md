@@ -8,6 +8,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Generating cloud using Perlin Noise](https://aswathkk.github.io/nature-of-code/#!/0/clouds-using-perlin-noise)
 - [Bouncing Ball](https://aswathkk.github.io/nature-of-code/#!/1/bouncing-ball)
 - [Ball with random acceleration](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration)
+- [Ball with random acceleration and Gravity](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration-and-gravity)
 
 ## Setup
 ```sh

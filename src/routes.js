@@ -2,6 +2,7 @@ import page from 'page';
 import p5 from 'p5/lib/p5.min.js';
 import chapters from './chapters';
 
+window.p5 = p5;
 const _chapter = document.getElementById('chapter');
 const _title = document.getElementById('title');
 const _disp = document.getElementById('disp');
