@@ -9,6 +9,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Bouncing Ball](https://aswathkk.github.io/nature-of-code/#!/1/bouncing-ball)
 - [Ball with random acceleration](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration)
 - [Ball with random acceleration and Gravity](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration-and-gravity)
+- [Helium Balloons](https://aswathkk.github.io/nature-of-code/#!/2/helium-balloons)
 
 ## Setup
 ```sh

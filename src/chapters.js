@@ -38,40 +38,45 @@ const chapters = [
 	},
 
 	{
-		name: 'Forces'
-	},
+		name: 'Forces',
+		samples: [{
+			name: 'Helium balloons',
+			slug: 'helium-balloons',
+			demo: require('./topics/forces/helium-balloons.js')
+		}]
+	}//,
 
-	{
-		name: 'Oscillation'
-	},
+	// {
+	// 	name: 'Oscillation'
+	// },
 
-	{
-		name: 'Particle Systems'
-	},
+	// {
+	// 	name: 'Particle Systems'
+	// },
 
-	{
-		name: 'Physics Libraries'
-	},
+	// {
+	// 	name: 'Physics Libraries'
+	// },
 
-	{
-		name: 'Autonomous Agents'
-	},
+	// {
+	// 	name: 'Autonomous Agents'
+	// },
 
-	{
-		name: 'Cellular Automata'
-	},
+	// {
+	// 	name: 'Cellular Automata'
+	// },
 
-	{
-		name: 'Fractals'
-	},
+	// {
+	// 	name: 'Fractals'
+	// },
 
-	{
-		name: 'The Evolution of Code'
-	},
+	// {
+	// 	name: 'The Evolution of Code'
+	// },
 
-	{
-		name: 'Neural Networks'
-	}
+	// {
+	// 	name: 'Neural Networks'
+	// }
 ];
 
 export default chapters;
