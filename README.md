@@ -1,9 +1,10 @@
 # Nature of Code Experiments
 My experiments while going through [Nature of Code](http://natureofcode.com) by Daniel Shiffman.
-https://aswathkk.github.io/nature-of-code/
 
 ## Experiments
 - [Random walk towards mouse pointer](https://aswathkk.github.io/nature-of-code/#!/0/random-walk-towards-mouse-pointer)
+- [Uniform distribution / Gaussian distribution / Perlin noise](https://aswathkk.github.io/nature-of-code/#!/0/uniform-vs-normal-vs-perlin-noise)
+- [Random Walk using Perlin Noise](https://aswathkk.github.io/nature-of-code/#!/0/random-walk-perlin-noise)
 
 ## Setup
 ```sh
@@ -14,6 +15,7 @@ npm install
 npm run dev
 
 ```
+Open http://localhost:9000 to see the page.
 
 ## Build for production
 ```sh

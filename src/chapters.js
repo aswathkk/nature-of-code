@@ -9,6 +9,10 @@ const chapters = [
 			name: 'Uniform distribution / Gaussian distribution / Perlin noise',
 			slug: 'uniform-vs-normal-vs-perlin-noise',
 			demo: require('./topics/introduction/uniform-vs-normal-vs-perlin-noise.js')
+		},{
+			name: 'Random Walk using Perlin Noise',
+			slug: 'random-walk-perlin-noise',
+			demo: require('./topics/introduction/random-walk-perlin-noise.js')
 		}]
 	},
 
