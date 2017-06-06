@@ -1,5 +1,5 @@
 module.exports = function (p) {
-window.p = p;
+
 	class Balloon {
 		constructor(x, y, size) {
 			this.loc = p.createVector(x, y);

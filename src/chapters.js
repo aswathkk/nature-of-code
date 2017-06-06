@@ -43,6 +43,10 @@ const chapters = [
 			name: 'Helium balloons',
 			slug: 'helium-balloons',
 			demo: require('./topics/forces/helium-balloons.js')
+		},{
+			name: 'Playing with mass',
+			slug: 'playing-with-mass',
+			demo: require('./topics/forces/playing-with-mass.js')
 		}]
 	}//,
 
