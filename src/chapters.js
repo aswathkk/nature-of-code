@@ -47,6 +47,10 @@ const chapters = [
 			name: 'Playing with mass',
 			slug: 'playing-with-mass',
 			demo: require('./topics/forces/playing-with-mass.js')
+		},{
+			name: 'Playing with Friction',
+			slug: 'playing-with-friction',
+			demo: require('./topics/forces/playing-with-friction.js')
 		}]
 	}//,
 

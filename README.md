@@ -10,6 +10,8 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Ball with random acceleration](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration)
 - [Ball with random acceleration and Gravity](https://aswathkk.github.io/nature-of-code/#!/1/ball-with-acceleration-and-gravity)
 - [Helium Balloons](https://aswathkk.github.io/nature-of-code/#!/2/helium-balloons)
+- [Playing with Mass](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-mass)
+- [Playing with Friction](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-friction)
 
 ## Setup
 ```sh
