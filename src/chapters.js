@@ -55,6 +55,10 @@ const chapters = [
 			name: 'Fluid Resistance: Experiment with drag force',
 			slug: 'fluid-resistance',
 			demo: require('./topics/forces/fluid-resistance.js')
+		},{
+			name: 'Gravitational Attraction',
+			slug: 'gravitational-attraction',
+			demo: require('./topics/forces/gravitational-attraction.js')
 		}]
 	}//,
 
