@@ -51,6 +51,10 @@ const chapters = [
 			name: 'Playing with Friction',
 			slug: 'playing-with-friction',
 			demo: require('./topics/forces/playing-with-friction.js')
+		},{
+			name: 'Fluid Resistance: Experiment with drag force',
+			slug: 'fluid-resistance',
+			demo: require('./topics/forces/fluid-resistance.js')
 		}]
 	}//,
 

@@ -12,6 +12,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Helium Balloons](https://aswathkk.github.io/nature-of-code/#!/2/helium-balloons)
 - [Playing with Mass](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-mass)
 - [Playing with Friction](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-friction)
+- [Fluid Resistance: Experiment with drag force](https://aswathkk.github.io/nature-of-code/#!/2/fluid-resistance)
 
 ## Setup
 ```sh
