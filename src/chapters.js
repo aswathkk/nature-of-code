@@ -59,6 +59,10 @@ const chapters = [
 			name: 'Gravitational Attraction',
 			slug: 'gravitational-attraction',
 			demo: require('./topics/forces/gravitational-attraction.js')
+		},{
+			name: 'Satellite launch',
+			slug: 'satellite-launch',
+			demo: require('./topics/forces/satellite-launch.js')
 		}]
 	}//,
 
