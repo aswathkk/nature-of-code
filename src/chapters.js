@@ -72,6 +72,10 @@ const chapters = [
 			name: 'Cannon',
 			slug: 'cannon',
 			demo: require('./topics/oscillation/cannon.js')
+		},{
+			name: 'Pointing in the direction of Motion',
+			slug: 'pointing-in-the-direction-of-motion',
+			demo: require('./topics/oscillation/pointing-in-the-direction-of-motion.js')
 		}]
 	}//,
 

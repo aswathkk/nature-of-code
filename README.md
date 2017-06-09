@@ -16,6 +16,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Gravitational attraction](https://aswathkk.github.io/nature-of-code/#!/2/gravitational-attraction)
 - [Satellite launch](https://aswathkk.github.io/nature-of-code/#!/2/satellite-launch)
 - [Cannon](https://aswathkk.github.io/nature-of-code/#!/3/cannon)
+- [Pointing in the direction of motion](https://aswathkk.github.io/nature-of-code/#!/3/pointing-in-the-direction-of-motion)
 
 ## Setup
 ```sh

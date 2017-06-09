@@ -1,5 +1,4 @@
 module.exports = function (p) {
-window.p = p;
 
 	class Ball {
 		constructor(x, y, size, mass) {
