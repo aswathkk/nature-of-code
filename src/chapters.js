@@ -76,6 +76,10 @@ const chapters = [
 			name: 'Pointing in the direction of Motion',
 			slug: 'pointing-in-the-direction-of-motion',
 			demo: require('./topics/oscillation/pointing-in-the-direction-of-motion.js')
+		},{
+			name: 'Pendulum',
+			slug: 'pendulum',
+			demo: require('./topics/oscillation/pendulum.js')
 		}]
 	}//,
 
