@@ -13,6 +13,9 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Playing with Mass](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-mass)
 - [Playing with Friction](https://aswathkk.github.io/nature-of-code/#!/2/playing-with-friction)
 - [Fluid Resistance: Experiment with drag force](https://aswathkk.github.io/nature-of-code/#!/2/fluid-resistance)
+- [Gravitational attraction](https://aswathkk.github.io/nature-of-code/#!/2/gravitational-attraction)
+- [Satellite launch](https://aswathkk.github.io/nature-of-code/#!/2/satellite-launch)
+- [Cannon](https://aswathkk.github.io/nature-of-code/#!/3/cannon)
 
 ## Setup
 ```sh

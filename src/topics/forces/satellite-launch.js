@@ -40,7 +40,7 @@ module.exports = function (p) {
 		p.createCanvas(600, 600);
 
 		earth = new Ball(p.width / 2, p.height / 2, 5);
-		satellite = new Ball(p.width / 2, p.height / 2 - (55), .25);
+		satellite = new Ball(p.width / 2, p.height / 2 - (52), .25);
 
 	}
 
@@ -133,6 +133,8 @@ module.exports = function (p) {
 			p.text("Satellite", 250, 14);
 
 			p.text("Use Keyboard arrows to control satellite's acceleration", 150, p.height - 20);
+
+			p.text(`Satellite's velocity : ${parseFloat(satellite.vel.mag()).toPrecision(2)}`, p.width - 130, 14);
 	}
 
 }

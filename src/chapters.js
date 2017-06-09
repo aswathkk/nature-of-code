@@ -64,11 +64,16 @@ const chapters = [
 			slug: 'satellite-launch',
 			demo: require('./topics/forces/satellite-launch.js')
 		}]
-	}//,
+	},
 
-	// {
-	// 	name: 'Oscillation'
-	// },
+	{
+		name: 'Oscillation',
+		samples: [{
+			name: 'Cannon',
+			slug: 'cannon',
+			demo: require('./topics/oscillation/cannon.js')
+		}]
+	}//,
 
 	// {
 	// 	name: 'Particle Systems'
