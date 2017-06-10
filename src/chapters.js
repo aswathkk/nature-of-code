@@ -89,6 +89,10 @@ const chapters = [
 			name: 'Particle System which follows mouse',
 			slug: 'particle-system-follows-mouse',
 			demo: require('./topics/particle_systems/particle-system-follows-mouse.js')
+		},{
+			name: 'Particle system with repeller',
+			slug: 'particle-system-with-repeller',
+			demo: require('./topics/particle_systems/particle-system-with-repeller.js')
 		}]
 	},
 

@@ -10,8 +10,8 @@ module.exports = function (p) {
 		}
 
 		draw() {
-			p.fill(0, this.lifeSpan);
-			p.stroke(0, this.lifeSpan);
+			p.fill(33, 150, 243, this.lifeSpan);
+			p.stroke(33, 150, 243, this.lifeSpan);
 			p.ellipse(this.loc.x, this.loc.y, 10);
 		}
 
@@ -35,6 +35,22 @@ module.exports = function (p) {
 		}
 	}
 
+	class RectParticle extends Particle {
+		draw() {
+			p.fill(205,220,57, this.lifeSpan);
+			p.stroke(205,220,57, this.lifeSpan);
+			p.rect(this.loc.x, this.loc.y, 10, 10);
+		}
+	}
+
+	class TriParticle extends Particle {
+		draw() {
+			p.fill(233, 30, 99, this.lifeSpan);
+			p.stroke(233, 30, 99, this.lifeSpan);
+			p.triangle(this.loc.x, this.loc.y, this.loc.x - 5, this.loc.y + 10, this.loc.x + 5, this.loc.y + 10);
+		}
+	}
+
 	class ParticleSystem {
 		constructor(x, y) {
 			this.loc = p.createVector(x, y);
@@ -51,7 +67,15 @@ module.exports = function (p) {
 			this.vel.limit(5);
 			this.loc.add(this.vel);
 
-			this.particles.push(new Particle(this.loc));
+			let c = p.random();
+			let particle;
+			if(c < 0.35)
+				particle = new RectParticle(this.loc);
+			else if( c < 0.7)
+				particle = new TriParticle(this.loc);
+			else
+				particle = new Particle(this.loc);
+			this.particles.push(particle);
 			for(let i = 0; i < this.particles.length; i++) {
 				if(this.particles[i].isDead())
 					this.particles.splice(i, 1);
@@ -71,7 +95,7 @@ module.exports = function (p) {
 	}
 
 	p.draw = () => {
-		p.background(200);
+		p.background(255);
 		ps.run();
 	}
 

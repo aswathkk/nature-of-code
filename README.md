@@ -18,6 +18,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Cannon](https://aswathkk.github.io/nature-of-code/#!/3/cannon)
 - [Pointing in the direction of motion](https://aswathkk.github.io/nature-of-code/#!/3/pointing-in-the-direction-of-motion)
 - [Particle system first Experiment](https://aswathkk.github.io/nature-of-code/#!/4/particle-system-follows-mouse)
+- [Particle system with Repeller](https://aswathkk.github.io/nature-of-code/#!/4/particle-system-with-repeller)
 
 ## Setup
 ```sh
