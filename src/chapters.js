@@ -81,11 +81,16 @@ const chapters = [
 			slug: 'pendulum',
 			demo: require('./topics/oscillation/pendulum.js')
 		}]
-	}//,
+	},
 
-	// {
-	// 	name: 'Particle Systems'
-	// },
+	{
+		name: 'Particle Systems',
+		samples: [{
+			name: 'Particle System which follows mouse',
+			slug: 'particle-system-follows-mouse',
+			demo: require('./topics/particle_systems/particle-system-follows-mouse.js')
+		}]
+	},
 
 	// {
 	// 	name: 'Physics Libraries'
