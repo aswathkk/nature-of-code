@@ -96,9 +96,14 @@ const chapters = [
 		}]
 	},
 
-	// {
-	// 	name: 'Physics Libraries'
-	// },
+	{
+		name: 'Physics Libraries',
+		samples: [{
+			name: 'First Experiment using Box2D',
+			slug: 'first-box2d-experiment',
+			demo: require('./topics/physics_libraries/first-box2d-experiment.js')
+		}]
+	},
 
 	// {
 	// 	name: 'Autonomous Agents'
