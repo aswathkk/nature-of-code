@@ -102,6 +102,10 @@ const chapters = [
 			name: 'First Experiment using Box2D',
 			slug: 'first-box2d-experiment',
 			demo: require('./topics/physics_libraries/first-box2d-experiment.js')
+		},{
+			name: 'Chain shape',
+			slug: 'chain-shape',
+			demo: require('./topics/physics_libraries/chain-shape.js')
 		}]
 	},
 
