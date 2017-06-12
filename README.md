@@ -21,7 +21,8 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Particle system with Repeller](https://aswathkk.github.io/nature-of-code/#!/4/particle-system-with-repeller)
 - [First Box2D Experiment](https://aswathkk.github.io/nature-of-code/#!/5/first-box2d-experiment)
 - [Chain Shape](https://aswathkk.github.io/nature-of-code/#!/5/chain-shape)
-- [Custome Shapes](https://aswathkk.github.io/nature-of-code/#!/5/custom-shapes)
+- [Custom Shapes](https://aswathkk.github.io/nature-of-code/#!/5/custom-shapes)
+- [Distance Joint](https://aswathkk.github.io/nature-of-code/#!/5/distance-joint)
 
 ## Setup
 ```sh

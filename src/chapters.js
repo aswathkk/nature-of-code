@@ -110,6 +110,10 @@ const chapters = [
 			name: 'Custom shapes',
 			slug: 'custom-shapes',
 			demo: require('./topics/physics_libraries/custom-shapes.js')
+		},{
+			name: 'Distance joint',
+			slug: 'distance-joint',
+			demo: require('./topics/physics_libraries/distance-joint.js')
 		}]
 	},
 
