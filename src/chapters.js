@@ -106,6 +106,10 @@ const chapters = [
 			name: 'Chain shape',
 			slug: 'chain-shape',
 			demo: require('./topics/physics_libraries/chain-shape.js')
+		},{
+			name: 'Custom shapes',
+			slug: 'custom-shapes',
+			demo: require('./topics/physics_libraries/custom-shapes.js')
 		}]
 	},
 
