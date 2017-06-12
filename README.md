@@ -22,7 +22,8 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [First Box2D Experiment](https://aswathkk.github.io/nature-of-code/#!/5/first-box2d-experiment)
 - [Chain Shape](https://aswathkk.github.io/nature-of-code/#!/5/chain-shape)
 - [Custom Shapes](https://aswathkk.github.io/nature-of-code/#!/5/custom-shapes)
-- [Distance Joint](https://aswathkk.github.io/nature-of-code/#!/5/distance-joint)
+- [Bridge using Distance Joint](https://aswathkk.github.io/nature-of-code/#!/5/distance-joint)
+- [Vehicle using Revolute Joint](https://aswathkk.github.io/nature-of-code/#!/5/revolute-joint)
 
 ## Setup
 ```sh

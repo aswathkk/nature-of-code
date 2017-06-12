@@ -111,9 +111,13 @@ const chapters = [
 			slug: 'custom-shapes',
 			demo: require('./topics/physics_libraries/custom-shapes.js')
 		},{
-			name: 'Distance joint',
+			name: 'Bridge using Distance joint',
 			slug: 'distance-joint',
 			demo: require('./topics/physics_libraries/distance-joint.js')
+		},{
+			name: 'Vehicle using Revolute joint',
+			slug: 'revolute-joint',
+			demo: require('./topics/physics_libraries/revolute-joint.js')
 		}]
 	},
 
