@@ -5,7 +5,7 @@ module.exports = function (p) {
 			this.loc = new p.createVector(x, y);
 
 			this.maxSpeed = 6;
-			this.maxForce = .1;
+			this.maxForce = .5;
 
 			this.vel = new p.createVector(p.random(), p.random());
 			this.acc = new p.createVector(0, 0);
@@ -53,19 +53,35 @@ module.exports = function (p) {
 			nextVel.setMag(50);
 			let predict = p5.Vector.add(this.loc, nextVel);
 
-			// calculate normal to the path. 
-			let A = p5.Vector.sub(predict, path.start);
-			let B = p5.Vector.sub(path.end, path.start);
-			B.normalize();
-			// projection from A to B
-			let proj = B.mult(A.dot(B));
-			let norm = p5.Vector.add(path.start, proj);
+			let norm;
+			let d = 999999;
+			let target;
 
-			let d = p5.Vector.sub(norm, predict).mag();
+			for(let i = 0; i < path.vertex.length - 1; i++) {
+				// calculate normal to the path. 
+				let A = p5.Vector.sub(predict, path.vertex[i]);
+				let B = p5.Vector.sub(path.vertex[i + 1], path.vertex[i]);
+				B.normalize();
+				// projection from A to B
+				let proj = B.mult(A.dot(B));
+				let n = p5.Vector.add(path.vertex[i], proj);
 
-			if(d > path.radius) {
-				B.setMag(10);
-				let target = p5.Vector.add(norm, B);
+				// little hack 😬
+				if(n.x > path.vertex[i + 1].x || n.x < path.vertex[i].x)
+					n = path.vertex[i + 1].copy();
+
+				let dist = p5.Vector.sub(n, predict).mag();
+
+				if(dist < d) {
+					d = dist;
+					norm = n;
+
+					B.setMag(10);
+					target = p5.Vector.add(norm, B);
+				}
+			}
+
+			if(d > path.radius && target != undefined) {
 				this.seek(target)
 			}
 			
@@ -87,9 +103,9 @@ module.exports = function (p) {
 
 		edge(path) {
 			// console.log(path)
-			if(this.loc.x > path.end.x + path.radius) {
-				this.loc.x = path.start.x - path.radius;
-				this.loc.y = path.start.y + this.loc.y - path.end.y;
+			if(this.loc.x > path.vertex[path.vertex.length - 1].x + path.radius) {
+				this.loc.x = path.vertex[0].x - path.radius;
+				this.loc.y = path.vertex[0].y ;
 			}
 		}
 	}
@@ -98,18 +114,26 @@ module.exports = function (p) {
 		constructor(x1, y1, x2, y2) {
 			this.radius = 20;
 
-			this.start = p.createVector(x1, y1);
-			this.end = p.createVector(x2, y2);
+			this.vertex = [];
+
+			this.vertex.push(p.createVector(20, 300));
+			this.vertex.push(p.createVector(200, 150));
+			this.vertex.push(p.createVector(350, 300));
+			this.vertex.push(p.createVector(450, 200));
+			this.vertex.push(p.createVector(700, 400));
 		}
 
 		draw() {
 			p.strokeWeight(this.radius * 2);
 			p.stroke(200, 100);
-			p.line(this.start.x, this.start.y, this.end.x, this.end.y);
+			for(let i = 0; i < this.vertex.length - 1; i++)
+				p.line(this.vertex[i].x, this.vertex[i].y, this.vertex[i + 1].x, this.vertex[i + 1].y);
 
 			p.strokeWeight(1);
 			p.stroke(0);
-			p.line(this.start.x, this.start.y, this.end.x, this.end.y);
+
+			for(let i = 0; i < this.vertex.length - 1; i++)
+				p.line(this.vertex[i].x, this.vertex[i].y, this.vertex[i + 1].x, this.vertex[i + 1].y);
 
 			p.fill(0);
 			p.stroke(0, 0);
@@ -124,7 +148,6 @@ module.exports = function (p) {
 
 	p.setup = () => {
 		p.createCanvas(600, 600);
-
 		for(let i = 0; i < 30; i++)
 			vehicles.push(new Vehicle(p.random(0, p.width), p.random(0, p.height)));
 

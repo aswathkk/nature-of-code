@@ -131,6 +131,10 @@ const chapters = [
 			name: 'Simple Path Follower',
 			slug: 'simple-path-follower',
 			demo: require('./topics/autonomous_agents/simple-path-follower.js')
+		},{
+			name: 'Complex Path Follower',
+			slug: 'complex-path-follower',
+			demo: require('./topics/autonomous_agents/complex-path-follower.js')
 		}]
 	},
 
