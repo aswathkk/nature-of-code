@@ -121,9 +121,14 @@ const chapters = [
 		}]
 	},
 
-	// {
-	// 	name: 'Autonomous Agents'
-	// },
+	{
+		name: 'Autonomous Agents',
+		samples: [{
+			name: 'Steering Behavior: Flow field following',
+			slug: 'flow-field-following',
+			demo: require('./topics/autonomous_agents/flow-field-following.js')
+		}]
+	},
 
 	// {
 	// 	name: 'Cellular Automata'

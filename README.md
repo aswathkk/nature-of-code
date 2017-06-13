@@ -24,6 +24,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Custom Shapes](https://aswathkk.github.io/nature-of-code/#!/5/custom-shapes)
 - [Bridge using Distance Joint](https://aswathkk.github.io/nature-of-code/#!/5/distance-joint)
 - [Vehicle using Revolute Joint](https://aswathkk.github.io/nature-of-code/#!/5/revolute-joint)
+- [Steering Behavior: Flow field following](https://aswathkk.github.io/nature-of-code/#!/6/flow-field-following)
 
 ## Setup
 ```sh
