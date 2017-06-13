@@ -127,6 +127,10 @@ const chapters = [
 			name: 'Steering Behavior: Flow field following',
 			slug: 'flow-field-following',
 			demo: require('./topics/autonomous_agents/flow-field-following.js')
+		},{
+			name: 'Simple Path Follower',
+			slug: 'simple-path-follower',
+			demo: require('./topics/autonomous_agents/simple-path-follower.js')
 		}]
 	},
 

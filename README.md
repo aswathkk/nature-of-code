@@ -25,6 +25,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Bridge using Distance Joint](https://aswathkk.github.io/nature-of-code/#!/5/distance-joint)
 - [Vehicle using Revolute Joint](https://aswathkk.github.io/nature-of-code/#!/5/revolute-joint)
 - [Steering Behavior: Flow field following](https://aswathkk.github.io/nature-of-code/#!/6/flow-field-following)
+- [Simple path follower](https://aswathkk.github.io/nature-of-code/#!/6/simple-path-follower)
 
 ## Setup
 ```sh
