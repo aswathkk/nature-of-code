@@ -146,9 +146,14 @@ const chapters = [
 		}]
 	},
 
-	// {
-	// 	name: 'Cellular Automata'
-	// },
+	{
+		name: 'Cellular Automata',
+		samples: [{
+			name: 'Wolfram Elementary Cellular automata',
+			slug: 'wolfram-elementarty-ca',
+			demo: require('./topics/cellular_automata/wolfram-elementarty-ca.js')
+		}]
+	},
 
 	// {
 	// 	name: 'Fractals'

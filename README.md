@@ -29,6 +29,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Complex path follower](https://aswathkk.github.io/nature-of-code/#!/6/complex-path-follower)
 - [Group Steering behavior: Separation](https://aswathkk.github.io/nature-of-code/#!/6/group-steering-behavior)
 - [Combining Steering behaviors](https://aswathkk.github.io/nature-of-code/#!/6/combinig-steering-behaviors)
+- [Wolfram Elementarty Cellular Automata](https://aswathkk.github.io/nature-of-code/#!/7/wolfram-elementarty-ca)
 
 ## Setup
 ```sh
