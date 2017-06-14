@@ -139,6 +139,10 @@ const chapters = [
 			name: 'Group Steering behavior: Separation',
 			slug: 'group-steering-behavior',
 			demo: require('./topics/autonomous_agents/group-steering-behavior.js')
+		},{
+			name: 'Combining Steering behaviors',
+			slug: 'combinig-steering-behaviors',
+			demo: require('./topics/autonomous_agents/combinig-steering-behaviors.js')
 		}]
 	},
 

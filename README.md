@@ -28,6 +28,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Simple path follower](https://aswathkk.github.io/nature-of-code/#!/6/simple-path-follower)
 - [Complex path follower](https://aswathkk.github.io/nature-of-code/#!/6/complex-path-follower)
 - [Group Steering behavior: Separation](https://aswathkk.github.io/nature-of-code/#!/6/group-steering-behavior)
+- [Combining Steering behaviors](https://aswathkk.github.io/nature-of-code/#!/6/combinig-steering-behaviors)
 
 ## Setup
 ```sh
