@@ -135,6 +135,10 @@ const chapters = [
 			name: 'Complex Path Follower',
 			slug: 'complex-path-follower',
 			demo: require('./topics/autonomous_agents/complex-path-follower.js')
+		},{
+			name: 'Group Steering behavior: Separation',
+			slug: 'group-steering-behavior',
+			demo: require('./topics/autonomous_agents/group-steering-behavior.js')
 		}]
 	},
 
