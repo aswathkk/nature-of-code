@@ -152,6 +152,10 @@ const chapters = [
 			name: 'Wolfram Elementary Cellular automata',
 			slug: 'wolfram-elementarty-ca',
 			demo: require('./topics/cellular_automata/wolfram-elementarty-ca.js')
+		},{
+			name: 'Game of Life',
+			slug: 'game-of-life',
+			demo: require('./topics/cellular_automata/game-of-life.js')
 		}]
 	},
 
