@@ -169,6 +169,10 @@ const chapters = [
 			name: 'Fractal Tree',
 			slug: 'tree',
 			demo: require('./topics/fractals/tree.js')
+		},{
+			name: 'L-System',
+			slug: 'l-system',
+			demo: require('./topics/fractals/l-system.js')
 		}]
 	}//,
 
