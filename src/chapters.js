@@ -159,9 +159,14 @@ const chapters = [
 		}]
 	},
 
-	// {
-	// 	name: 'Fractals'
-	// },
+	{
+		name: 'Fractals',
+		samples: [{
+			name: 'Snow Flakes using Koch Curve',
+			slug: 'koch-curve',
+			demo: require('./topics/fractals/koch-curve.js')
+		}]
+	}//,
 
 	// {
 	// 	name: 'The Evolution of Code'
