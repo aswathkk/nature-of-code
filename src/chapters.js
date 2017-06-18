@@ -165,6 +165,10 @@ const chapters = [
 			name: 'Snow Flakes using Koch Curve',
 			slug: 'koch-curve',
 			demo: require('./topics/fractals/koch-curve.js')
+		},{
+			name: 'Fractal Tree',
+			slug: 'tree',
+			demo: require('./topics/fractals/tree.js')
 		}]
 	}//,
 
