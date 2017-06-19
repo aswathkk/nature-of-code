@@ -35,6 +35,19 @@ main {
 		display: block;
 		margin: auto;
 	}
+
+	.info {
+		float: left;
+		padding: 10px;
+	}
+
+	.phrases {
+		float: left;
+		padding: 10px;
+		display: block;
+		text-align: right;
+		width: 50%;
+	}
 }
 
 footer {
@@ -42,6 +55,7 @@ footer {
 	color: $white;
 	padding: 30px;
 	text-align: center;
+	clear: both;
 
 	a {
 		color: $white;

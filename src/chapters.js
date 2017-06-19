@@ -174,11 +174,16 @@ const chapters = [
 			slug: 'l-system',
 			demo: require('./topics/fractals/l-system.js')
 		}]
-	}//,
+	},
 
-	// {
-	// 	name: 'The Evolution of Code'
-	// },
+	{
+		name: 'The Evolution of Code',
+		samples: [{
+			name: 'Evolving Shakespeare',
+			slug: 'shakespeare',
+			demo: require('./topics/genetic_algorithm/shakespeare.js')
+		}]
+	}//,
 
 	// {
 	// 	name: 'Neural Networks'
