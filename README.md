@@ -35,6 +35,7 @@ My experiments while going through [Nature of Code](http://natureofcode.com) by 
 - [Fractal Tree](https://aswathkk.github.io/nature-of-code/#!/8/tree)
 - [Tree Using L-System](https://aswathkk.github.io/nature-of-code/#!/8/l-system)
 - [Evolving Shakespeare](https://aswathkk.github.io/nature-of-code/#!/9/shakespeare)
+- [Smart Path Finder](https://aswathkk.github.io/nature-of-code/#!/9/smart-rockets)
 
 ## Setup
 ```sh

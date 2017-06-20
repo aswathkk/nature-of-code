@@ -182,6 +182,10 @@ const chapters = [
 			name: 'Evolving Shakespeare',
 			slug: 'shakespeare',
 			demo: require('./topics/genetic_algorithm/shakespeare.js')
+		},{
+			name: 'Smart Path Finder',
+			slug: 'smart-rockets',
+			demo: require('./topics/genetic_algorithm/smart-rockets.js')
 		}]
 	}//,
 
