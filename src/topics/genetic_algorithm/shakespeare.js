@@ -129,32 +129,36 @@ module.exports = function (p) {
 		}
 
 		naturalSelection() {
-			// Creating a mating pool where frequency of organisms directly proportional to
-			// their fitness. Hence more probability of selecting the fittest.
-			this.matingPool = [];
-			for(let i = 0; i < this.organisms.length; i++) {
-				let n = p.floor(this.organisms[i].fitness * 100);
-				for(let j = 0; j < n; j++)
-					this.matingPool.push(this.organisms[i]);
-			}
-
-			// Selecting 2 random organisms from mating pool
+			// Select 2 random organisms
 			// crossover them and mutate the child based on mutationRate.
 			// Put the newly created child into population.
-			for(let i = 0; i < this.organisms.length; i++) {
-				let a = p.floor(p.random(this.matingPool.length));
-				let b = p.floor(p.random(this.matingPool.length));
 
-				let partnerA = this.matingPool[a];
-				let partnerB = this.matingPool[b];
+			let total = this.organisms.reduce((p, c) => p + c.fitness, 0);
+			let normalizedFitness = this.organisms.map(og => og.fitness / total);
+			let newOrganisms = [];
+
+			for(let i = 0; i < this.organisms.length; i++) {
+				let a = this.pickOne(normalizedFitness);
+				let b = this.pickOne(normalizedFitness);
+
+				let partnerA = this.organisms[a];
+				let partnerB = this.organisms[b];
 
 				let child = partnerA.crossover(partnerB);
 				child.mutate(this.mutationRate);
 
-				this.organisms[i] = child;
+				newOrganisms.push(child);
 			}
-
+			this.organisms = newOrganisms;
 			this.generation++;
+		}
+
+		pickOne(arr) {
+			let r = p.random();
+			let i = 0;
+			while(r > 0)
+				r -= arr[i++];
+			return --i;
 		}
 
 		finished() {

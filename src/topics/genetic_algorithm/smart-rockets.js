@@ -132,25 +132,28 @@ module.exports = function (p) {
 			this.averageFitness /= this.movers.length;
 		}
 
-		selection() {
-			this.matingPool = [];
-			for(let i = 0; i < this.movers.length; i++) {
-				let n = p.floor(this.movers[i].fitness * 10000);
-				for(let j = 0; j < n; j++){
-					this.matingPool.push(this.movers[i].dna);
-				}
-			}
-		}
-
 		reproduction() {
+			let total = this.movers.reduce((p, c) => p + c.fitness, 0);
+			let normalizedFitness = this.movers.map(mov => mov.fitness / total);
+			let newMovers = [];
+
 			for(let i = 0; i < this.movers.length; i++) {
-				let partnerA = this.matingPool[p.floor(p.random(this.matingPool.length))];
-				let partnerB = this.matingPool[p.floor(p.random(this.matingPool.length))];
+				let partnerA = this.movers[this.pickOne(normalizedFitness)].dna;
+				let partnerB = this.movers[this.pickOne(normalizedFitness)].dna;
 				let child = partnerA.crossover(partnerB);
 				child.mutate(this.mutationrate);
-				this.movers[i] = new Mover(this.loc.copy(), child);
+				newMovers[i] = new Mover(this.loc.copy(), child);
 			}
+			this.movers = newMovers;
 			this.generation++;
+		}
+
+		pickOne(arr) {
+			let r = p.random();
+			let i = 0;
+			while(r > 0)
+				r -= arr[i++];
+			return --i;
 		}
 
 		draw() {
@@ -179,7 +182,7 @@ module.exports = function (p) {
 		}
 
 		getFitness() {
-			return this.averageFitness;
+			return this.averageFitness * 100;
 		}
 
 		getPopulation() {
@@ -219,7 +222,6 @@ module.exports = function (p) {
 		} else {
 			lifecycle = 0;
 			mPop.calcFitness();
-			mPop.selection();
 			mPop.reproduction();
 		}
 
