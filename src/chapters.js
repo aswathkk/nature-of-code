@@ -187,11 +187,16 @@ const chapters = [
 			slug: 'smart-rockets',
 			demo: require('./topics/genetic_algorithm/smart-rockets.js')
 		}]
-	}//,
+	},
 
-	// {
-	// 	name: 'Neural Networks'
-	// }
+	{
+		name: 'Neural Networks',
+		samples: [{
+			name: 'Perceptron',
+			slug: 'perceptron',
+			demo: require('./topics/neural_networks/perceptron.js')
+		}]
+	}
 ];
 
 export default chapters;
