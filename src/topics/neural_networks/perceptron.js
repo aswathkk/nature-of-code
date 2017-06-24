@@ -24,25 +24,47 @@ module.exports = function (p) {
                 return 1;
             return -1;
         }
+
+        guessY(x) {
+            let m = -this.weights[0] / this.weights[1];
+            let c = -this.weights[2] / this.weights[1];
+            return m * x + c;
+        }
     }
 
     class Point {
         constructor(x, y) {
             this.input = [x, y, 1];
-            if(x > y)
+            let lineY = f(x);
+            if(y > lineY)
                 this.output = 1;
             else
                 this.output = -1;
         }
 
+        pixelX() {
+            return p.map(this.input[0], -1, 1, 0, p.width);
+        }
+
+        pixelY() {
+            return p.map(this.input[1], -1, 1, p.height, 0);
+        }
+
         draw() {
             if(this.output == -1)
-                p.fill(255, 0, 0);
+                p.fill(0);
             else
-                p.fill(0, 255, 0);
+                p.fill(255);
             
-            p.ellipse(this.input[0], this.input[1], 10);
+            let x = this.pixelX();
+            let y = this.pixelY();
+            p.ellipse(x, y, 15);
         }
+    }
+
+    let f = (x) => {
+        // y = mx + c
+        return .2 * x + .3;
     }
 
     let perceptron;
@@ -50,27 +72,39 @@ module.exports = function (p) {
     let count = 0;
 
     p.setup = () => {
-        p.createCanvas(400, 400);
-        p.frameRate(1);
-        perceptron = new Perceptron(3, 0.01);
-
-        for(let i = 0; i < 20; i++)
-            point.push(new Point(p.random(10, p.width - 10), p.random(10, p.height - 10)));
+        p.createCanvas(500, 500);
+        p.frameRate(2);
+        perceptron = new Perceptron(3, .005);
+        
+        for(let i = 0; i < 50; i++)
+            point.push(new Point(p.random(-1, 1), p.random(-1, 1)));
     }
 
     p.draw = () => {
         p.background(255);
-        p.noStroke();
-        for(let i = 0; i < point.length; i++)
-            point[i].draw();
+        p.stroke(0);
 
-        perceptron.train(point[count].input, point[count].output)
-        count = (count + 1) % point.length;
+        let p1 = new Point(-1, f(-1));
+        let p2 = new Point(1, f(1));
+        p.line(p1.pixelX(), p1.pixelY(), p2.pixelX(), p2.pixelY());
 
-        p.noStroke();
-        p.fill(0);
-        p.text(perceptron.weights[0], 5, 15);
-        p.text(perceptron.weights[1], 5, 30);
-        p.text(perceptron.weights[2], 5, 45);
+        let p3 = new Point(-1, perceptron.guessY(-1));
+        let p4 = new Point(1, perceptron.guessY(1));
+        p.line(p3.pixelX(), p3.pixelY(), p4.pixelX(), p4.pixelY());
+
+        point.forEach(pt => pt.draw());
+
+        point.forEach( pt => {
+            let target = pt.output;
+            perceptron.train(pt.input, target);
+            let guess = perceptron.feedForward(pt.input);
+            if(guess === target)
+                p.fill(0, 255, 0);
+            else
+                p.fill(255, 0, 0);
+            
+            p.noStroke();
+            p.ellipse(pt.pixelX(), pt.pixelY(), 8);
+        });
     }
 }
