@@ -33,13 +33,9 @@ module.exports = function (p) {
     }
 
     class Point {
-        constructor(x, y) {
+        constructor(x, y, o) {
             this.input = [x, y, 1];
-            let lineY = f(x);
-            if(y > lineY)
-                this.output = 1;
-            else
-                this.output = -1;
+            this.output = o;
         }
 
         pixelX() {
@@ -69,42 +65,65 @@ module.exports = function (p) {
 
     let perceptron;
     let point = [];
-    let count = 0;
+    let out = 1;
+    let learningRate = 0.05;
 
     p.setup = () => {
         p.createCanvas(500, 500);
         p.frameRate(2);
-        perceptron = new Perceptron(3, .005);
-        
-        for(let i = 0; i < 50; i++)
-            point.push(new Point(p.random(-1, 1), p.random(-1, 1)));
+        perceptron = new Perceptron(3, learningRate);
     }
 
     p.draw = () => {
         p.background(255);
         p.stroke(0);
 
-        let p1 = new Point(-1, f(-1));
-        let p2 = new Point(1, f(1));
+        let p1 = new Point(-1, perceptron.guessY(-1));
+        let p2 = new Point(1, perceptron.guessY(1));
         p.line(p1.pixelX(), p1.pixelY(), p2.pixelX(), p2.pixelY());
 
-        let p3 = new Point(-1, perceptron.guessY(-1));
-        let p4 = new Point(1, perceptron.guessY(1));
-        p.line(p3.pixelX(), p3.pixelY(), p4.pixelX(), p4.pixelY());
-
-        point.forEach(pt => pt.draw());
-
-        point.forEach( pt => {
-            let target = pt.output;
-            perceptron.train(pt.input, target);
-            let guess = perceptron.feedForward(pt.input);
-            if(guess === target)
-                p.fill(0, 255, 0);
-            else
-                p.fill(255, 0, 0);
-            
-            p.noStroke();
-            p.ellipse(pt.pixelX(), pt.pixelY(), 8);
+        point.forEach(pt => {
+            pt.draw();
+            perceptron.train(pt.input, pt.output);
         });
+
+        p.noStroke();
+        p.fill(0);
+        p.text('Click anywhere to add data points', 5, 15);
+        p.text(`Use 'T' to toggle type`, 5, 45);
+        p.text(`Use 'W' or 'S' to adjust learning rate`, 5, 30);
+        p.text(`Learning rate : ${learningRate}`, p.width - 120, 30);
+        p.text('Next type : ', p.width - 100, 15);
+
+        p.stroke(0);
+        if(out == -1)
+            p.fill(0);
+        else
+            p.fill(255);
+        p.ellipse(p.width - 30, 10, 10);
+    }
+
+    p.keyPressed = () => {
+        switch(p.key) {
+            case 'T':
+                out *= -1;
+                break;
+            case 'W':
+                learningRate += 0.001;
+                break;
+            case 'S':
+                learningRate -= 0.001;
+                break;
+        }
+
+        return false;
+    }
+
+    p.mousePressed = () => {
+        let x = p.map(p.mouseX, 0, p.width, -1, 1);
+        let y = p.map(p.mouseY, p.height, 0, -1, 1);
+        point.push(new Point(x, y, out));
+
+        return false;
     }
 }
