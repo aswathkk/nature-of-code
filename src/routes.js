@@ -13,7 +13,7 @@ let canvas;
 
 page('/', (ctx) => {
 	reset();
-	let s = '<ol>';
+	let s = '<ul>';
 	chapters.forEach((c, i) => {
 		s += `<li>${c.name}`;
 		if(c.samples) {
@@ -25,7 +25,7 @@ page('/', (ctx) => {
 		}
 		s += '</li>';
 	});
-	_disp.innerHTML = `${s}</ol>`;
+	_disp.innerHTML = `${s}</ul>`;
 });
 
 page('/:chapter/:demo', ctx => {
